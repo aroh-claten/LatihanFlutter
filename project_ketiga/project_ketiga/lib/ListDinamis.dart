@@ -50,7 +50,9 @@ class TodoScreen extends StatelessWidget {
                 ),
                 subtitle: Text(todos[index].detail),
                 onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => 
-                DetailScreen( todos[index]);
+                DetailScreen(todo: todos [index]
+                )
+                )
                 ),
               ),
             ),
@@ -70,7 +72,7 @@ class DetailScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(todo.judul),
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.blue,
       ),
       body: Center(
         child: Column(
@@ -82,6 +84,13 @@ class DetailScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
               textAlign: TextAlign.center,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: new Text(
+                todo.detail,
+                textAlign: TextAlign.center,
+              ),
             ),
 
           ],
