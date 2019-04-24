@@ -50,7 +50,7 @@ class TodoScreen extends StatelessWidget {
                 ),
                 subtitle: Text(todos[index].detail),
                 onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => 
-                DetailScreen( todos[index])
+                DetailScreen( todos[index]);
                 ),
               ),
             ),
